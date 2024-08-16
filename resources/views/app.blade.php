@@ -7,7 +7,7 @@
     <title>SHKB Dasturlar ruyhati</title>
     <link rel="prefetch" href="/fon.gif">
     <link rel="stylesheet" href="/awesome/css/all.min.css">
+    @vite(['resources/ts/app.ts'])
 </head>
 <body id="app"></body>
-@vite('resources/ts/app.ts')
 </html>
