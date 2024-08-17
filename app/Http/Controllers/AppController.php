@@ -60,7 +60,7 @@ class AppController extends Controller
         $app->link = $request->link;
         $app->category_id = $request->category_id;
 
-        if ($request->icon) {
+        if ($request->file('icon')) {
             $this->clearImgFile($app->icon);
             $app->icon = $this->createImage($app->id, $request->icon);
         }

@@ -61,6 +61,7 @@ async function getApplication() {
 	formData.name = application.name
 	formData.category_id = application.category_id
 	formData.link = application.link
+	formData.icon = application.icon
 	formData.preview = `/icons/${application.icon}`
 	formData.tasks = application.tasks
 	formData.description = application.description
