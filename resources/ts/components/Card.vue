@@ -1,7 +1,7 @@
 <template>
     <section class="p-6 pb-5 bg-white shadow-md rounded-xl">
         <UpdateAppForm v-if="editAppHandler" :application="application" @close="editAppHandler = false" />
-        <main class="h-52 lg:h-52 xl:h-52 2xl:h-60">
+        <main class="h-40">
             <div class="flex items-center">
                 <article class="flex justify-center items-center w-12 h-12 border rounded-md">
                     <img :src="'/icons/' + application.icon" class="w-9">
@@ -19,10 +19,22 @@
             </div>
 
             <ul class="text-sm text-gray-500 mt-4">
-                <li v-for="task in application.tasks">
-                    <i class="fa-solid fa-circle-small scale-50"></i>
-                    {{ task.description }}
-                </li>
+                <template v-if="application.tasks.length < 3">
+                    <li v-for="task in application.tasks">
+                        <i class="fa-solid fa-circle-small scale-50"></i>
+                        {{ task.description }}
+                    </li>
+                </template>
+                <template v-else>
+                    <li>
+                        <i class="fa-solid fa-circle-small scale-50"></i>
+                        {{ application.tasks[0].description }}
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-circle-small scale-50"></i>
+                        {{ application.tasks[1].description }}
+                    </li>
+                </template>
             </ul>
         </main>
         <main>
@@ -40,13 +52,13 @@
                             <i class="fa-solid fa-pen"></i>
                         </span>
                     </button>
-                    <!-- <button class="bg-gray-200 w-10 h-10 rounded-full shadow-sm text-blue-600 relative overflow-hidden">
+                    <button v-else class="bg-gray-200 w-10 h-10 rounded-full shadow-sm text-blue-600 relative overflow-hidden">
                         <i class="fa-solid fa-book-blank"></i>
                         <span
                             class="absolute inset-0 flex items-center justify-center bg-gray-200 opacity-0 hover:opacity-100 transition-opacity">
                             <i class="fa-solid fa-book-open-cover"></i>
                         </span>
-                    </button> -->
+                    </button>
                 </main>
             </div>
         </main>
@@ -62,14 +74,7 @@ const Auth = useAuthStore()
 const { application } = defineProps(['application'])
 const editAppHandler = ref(false)
 
-const buttonLoading = ref(false)
-
 function openUpdateForm() {
-    buttonLoading.value = true
     editAppHandler.value = true
-}
-
-function uploadApp() {
-    buttonLoading.value = false
 }
 </script>

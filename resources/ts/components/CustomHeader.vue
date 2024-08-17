@@ -1,11 +1,9 @@
 <template>
     <header class="py-2 font-semibold text-slate-800">
         <main class="flex justify-between items-center mb-6">
-            <div class="text-xl">
-                <span class="text-3xl text-blue-600">
-                    <i class="fa-brands fa-hive"></i>
-                </span>
-                NGMK UAKTM
+            <div class="text-xl flex items-end">
+                <img :src="logoimage" class="inline w-12">
+                <span>AJ NKMK UAKTM </span>
             </div>
     
             <RouterLink v-if="AuthStore.user == null" :to="{name: 'login'}">
@@ -36,6 +34,7 @@
 </template>
 
 <script setup lang="ts">
+import logoimage from '@/assets/logo.png'
 import axios from '@/modules/axios'
 import { reactive } from 'vue'
 import { useAppStore } from '@/store/useApplication'
