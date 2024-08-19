@@ -1,7 +1,7 @@
 <template>
     <section class="px-6 py-4 bg-white shadow-md rounded-xl">
         <UpdateAppForm v-if="editAppHandler" :application="application" @close="editAppHandler = false" />
-        <main class="h-44">
+        <main class="h-48">
             <a :href="'http://' + application.link" class="font-bold text-base inline-block text-slate-800 leading-none mb-4">
                 {{ application.name }}
             </a>
@@ -39,8 +39,8 @@
             </ul>
         </main>
         <main>
-            <hr class="mt-5 -mx-6">
-            <div class="flex justify-between items-center pt-4">
+            <hr class="mt-4 -mx-6">
+            <div class="flex justify-between items-center pt-3">
                 <span class="text-sm text-gray-500">
                     {{ moment(application.created_at).format('DD-MM-YYYY') }}
                 </span>
