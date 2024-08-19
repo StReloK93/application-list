@@ -1,17 +1,18 @@
 <template>
-    <section class="p-6 pb-5 bg-white shadow-md rounded-xl">
+    <section class="px-6 py-4 bg-white shadow-md rounded-xl">
         <UpdateAppForm v-if="editAppHandler" :application="application" @close="editAppHandler = false" />
-        <main class="h-40">
-            <div class="flex items-center">
+        <main class="h-44">
+            <a :href="'http://' + application.link" class="font-bold text-base inline-block text-slate-800 leading-none mb-4">
+                {{ application.name }}
+            </a>
+            <div class="flex items-start">
                 <article class="flex justify-center items-center w-12 h-12 border rounded-md">
                     <img :src="'/icons/' + application.icon" class="w-9">
                 </article>
-                <nav class="leading-none flex-grow ml-5">
+                <nav class=" flex-grow ml-5">
                     <a class="text-xs text-gray-400 hover:text-blue-500" :href="'http://' + application.link"
                         target="_blank">
-                        <h3 class="font-bold text-base text-slate-800">
-                            {{ application.name }}
-                        </h3>
+
                         <i class="fa-light fa-link-simple text-blue-400"></i>
                         {{ application.link }}
                     </a>
@@ -52,7 +53,8 @@
                             <i class="fa-solid fa-pen"></i>
                         </span>
                     </button>
-                    <button v-else class="bg-gray-200 w-10 h-10 rounded-full shadow-sm text-blue-600 relative overflow-hidden">
+                    <button v-else
+                        class="bg-gray-200 w-10 h-10 rounded-full shadow-sm text-blue-600 relative overflow-hidden">
                         <i class="fa-solid fa-book-blank"></i>
                         <span
                             class="absolute inset-0 flex items-center justify-center bg-gray-200 opacity-0 hover:opacity-100 transition-opacity">
