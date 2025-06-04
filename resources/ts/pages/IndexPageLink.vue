@@ -4,7 +4,7 @@
          <CreatePageLinkForm v-if="pageData.state_create_form" @close="pageData.state_create_form = false" @submit-form="createPageLink" />
       </Transition>
       <UpdatePageLinkForm v-if="pageData.selected" :pageLinkId="pageData.selected" @close="pageData.selected = null" @submit-form="updatePageLink" />
-      <nav class="text-right mb-4">
+      <nav v-if="AuthStore.user" class="text-right mb-4">
          <button @click="pageData.state_create_form = true"
             class="bg-slate-50 hover:bg-white w-10 h-10 rounded-full shadow-sm border border-zinc-100 text-blue-600 relative overflow-hidden">
             <i class="fa-solid fa-plus"></i>

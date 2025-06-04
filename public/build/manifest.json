@@ -1,6 +1,6 @@
 {
-  "_vee-validate.esm-3fu7n-xi.js": {
-    "file": "assets/vee-validate.esm-3fu7n-xi.js",
+  "_vee-validate.esm-TeJ0ahob.js": {
+    "file": "assets/vee-validate.esm-TeJ0ahob.js",
     "imports": [
       "resources/ts/app.ts"
     ]
@@ -15,7 +15,7 @@
       "resources/ts/pages/IndexPageLink.vue",
       "resources/ts/pages/Login.vue"
     ],
-    "file": "assets/app-71SF9D7w.js",
+    "file": "assets/app-QDgvkaYH.js",
     "isEntry": true,
     "src": "resources/ts/app.ts"
   },
@@ -27,7 +27,7 @@
     "assets": [
       "assets/logo-jbK9qYTa.png"
     ],
-    "file": "assets/Index-QgGkOGJD.js",
+    "file": "assets/Index--EB8x9Um.js",
     "imports": [
       "resources/ts/app.ts"
     ],
@@ -35,25 +35,25 @@
     "src": "resources/ts/pages/Index.vue"
   },
   "resources/ts/pages/IndexApplication.vue": {
-    "file": "assets/IndexApplication-IoZmLKkI.js",
+    "file": "assets/IndexApplication-ufkoNOcU.js",
     "imports": [
       "resources/ts/app.ts",
-      "_vee-validate.esm-3fu7n-xi.js"
+      "_vee-validate.esm-TeJ0ahob.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/ts/pages/IndexApplication.vue"
   },
   "resources/ts/pages/IndexPageLink.vue": {
-    "file": "assets/IndexPageLink-G229IQ9q.js",
+    "file": "assets/IndexPageLink-JI9F48bj.js",
     "imports": [
       "resources/ts/app.ts",
-      "_vee-validate.esm-3fu7n-xi.js"
+      "_vee-validate.esm-TeJ0ahob.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/ts/pages/IndexPageLink.vue"
   },
   "resources/ts/pages/Login.vue": {
-    "file": "assets/Login-sErqthQM.js",
+    "file": "assets/Login-OrpJAV-0.js",
     "imports": [
       "resources/ts/app.ts"
     ],
