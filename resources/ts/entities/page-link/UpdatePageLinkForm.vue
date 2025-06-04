@@ -2,7 +2,7 @@
 	<section @mousedown="pageData.openForm = false"
 		class="fixed w-full h-full bg-black/55 backdrop-blur-sm top-0 left-0 z-50 flex justify-end">
 		<nav ref="addAppModal" @transitionend="animationend" @mousedown.stop
-			:class="[{ 'translate-x-0': pageData.openForm }]"
+			:class="[{ '!translate-x-0': pageData.openForm }]"
 			class="w-96 bg-gray-100 p-4 shadow translate-x-full transition-transform duration-500">
 			<Form @submit="submitHandler">
 				<h3 class="-m-4 mb-0 p-4 bg-white border-b font-semibold text-center">
