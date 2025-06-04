@@ -22,7 +22,9 @@
          </tr>
          <tr v-for="page_link in pageData.page_links">
             <td class="border px-2 h-10 text-center">{{ page_link.id }}</td>
-            <td class="border px-2 h-10">{{ page_link.link }}</td>
+            <td class="border px-2 h-10">
+               <a :href="`http://${page_link.link}`" class="hover:underline" target="_blank" rel="noopener noreferrer">{{ page_link.link }}</a>
+            </td>
             <td class="border px-2 h-10">{{ page_link.description }}</td>
 
             <template v-if="AuthStore.user">
