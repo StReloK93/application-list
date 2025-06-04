@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\AppController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PageLinkController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,5 +31,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('category', CategoryController::class);
 Route::apiResource('app', AppController::class)->except(['update']);
+Route::apiResource('page-link', PageLinkController::class);
+
 
 Route::post('app/{app}', [AppController::class, 'update']);
