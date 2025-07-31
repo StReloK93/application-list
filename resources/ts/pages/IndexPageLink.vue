@@ -11,7 +11,7 @@
          </button>
       </nav>
       <table class="w-full">
-         <tr>
+         <tr class="font-semibold uppercase">
             <td class="border px-2 py-1 w-10 text-center">№</td>
             <td class="border px-2 py-1">Sahifa manzili</td>
             <td class="border px-2 py-1">Malumoti</td>
@@ -20,12 +20,12 @@
                <td class="border px-2 py-1 w-10"></td>
             </template>
          </tr>
-         <tr v-for="page_link in pageData.page_links">
-            <td class="border px-2 h-10 text-center">{{ page_link.id }}</td>
+         <tr v-for="(page_link, index) in pageData.page_links">
+            <td class="border px-2 h-10 text-center">{{ index + 1 }}</td>
             <td class="border px-2 h-10">
                <a :href="`http://${page_link.link}`" class="hover:underline" target="_blank" rel="noopener noreferrer">{{ page_link.link }}</a>
             </td>
-            <td class="border px-2 h-10">{{ page_link.description }}</td>
+            <td class="border px-2 h-10 whitespace-pre">{{ page_link.description }}</td>
 
             <template v-if="AuthStore.user">
                <td @click="pageData.selected = page_link.id" class="border px-2 h-10 text-center hover:bg-gray-100 cursor-pointer">
